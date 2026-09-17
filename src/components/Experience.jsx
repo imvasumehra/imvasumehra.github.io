@@ -16,19 +16,19 @@ const Experience = () => {
         <h2 className={styles.sectionHeadText}>Experience.</h2>
       </motion.div>
 
-      <div className='mt-16 flex flex-col'>
+      <div className='mt-[var(--stack-gap)] flex flex-col'>
         {experiences.map((exp) => (
           <div
             key={`${exp.org}-${exp.title}`}
-            className='border-l border-white/10 pl-6 pb-10 last:pb-0'
+            className='border-l border-white/10 pl-5 pb-[var(--stack-gap)] last:pb-0'
           >
-            <h3 className='text-white text-[22px] font-bold'>{exp.title}</h3>
-            <p className='text-secondary text-[16px] font-semibold'>
+            <h3 className='text-white text-[length:var(--fs-entry-title)] font-bold leading-[1.25]'>{exp.title}</h3>
+            <p className='text-secondary text-[length:var(--fs-entry-meta)] font-semibold'>
               {exp.org} · {exp.date}
             </p>
-            <ul className='mt-4 list-disc ml-5 space-y-2'>
+            <ul className='mt-2 list-disc ml-5 space-y-1'>
               {exp.points?.map((point, i) => (
-                <li key={i} className='text-white-100 text-[14px] tracking-wider'>
+                <li key={i} className='text-white-100 text-[length:var(--fs-entry-body)] leading-[1.6]'>
                   {point}
                 </li>
               ))}

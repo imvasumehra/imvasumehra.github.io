@@ -6,6 +6,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "./SectionWrapper";
 
 const LINKS = [
+  { key: "cv", label: "CV (PDF)", href: (v) => v },
   { key: "email", label: "Email", href: (v) => `mailto:${v}` },
   { key: "github", label: "GitHub", href: (v) => v },
   { key: "linkedin", label: "LinkedIn", href: (v) => v },
@@ -20,7 +21,7 @@ const Contact = () => (
     </motion.div>
 
     <motion.div variants={fadeIn("", "", 0.1, 1)} className='mt-8'>
-      <p className='text-secondary text-[17px] max-w-2xl leading-[30px]'>
+      <p className='text-secondary text-[length:var(--fs-lead)] max-w-2xl leading-[1.65]'>
         Happy to talk about signal processing, NLP, or anything I've written
         about here.
       </p>

@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# LaTeX build artifacts
+cv/*.aux
+cv/*.log
+cv/*.out

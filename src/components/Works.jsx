@@ -5,34 +5,43 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "./SectionWrapper";
 
-const ProjectCard = ({ index, name, description, tags = [], link, repo }) => (
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags = [],
+  link,
+  linkLabel = "Read more",
+  repo,
+  repoLabel = "Code",
+}) => (
   <motion.div
     variants={fadeIn("up", "spring", index * 0.2, 0.75)}
-    className='bg-tertiary p-6 rounded-2xl sm:w-[360px] w-full flex flex-col shadow-card'
+    className='bg-tertiary p-6 rounded-2xl h-full flex flex-col shadow-card'
   >
-    <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-    <p className='mt-2 text-secondary text-[14px] leading-[22px] flex-1'>
+    <h3 className='text-white font-bold text-[length:var(--fs-card-title)] leading-[1.25]'>{name}</h3>
+    <p className='mt-2 text-secondary text-[length:var(--fs-card-body)] leading-[1.55] flex-1'>
       {description}
     </p>
 
-    <div className='mt-4 flex flex-wrap gap-2'>
+    <div className='mt-3 flex flex-wrap gap-2'>
       {tags.map((tag) => (
-        <span key={tag} className='text-[13px] text-white-100/70'>
+        <span key={tag} className='text-[14px] text-white-100/70'>
           #{tag}
         </span>
       ))}
     </div>
 
     {(link || repo) && (
-      <div className='mt-5 flex gap-4'>
+      <div className='mt-4 flex gap-4'>
         {link && (
           <a
             href={link}
             target='_blank'
             rel='noreferrer'
-            className='text-[14px] text-white underline underline-offset-4'
+            className='text-[15px] text-white underline underline-offset-4'
           >
-            Read more
+            {linkLabel}
           </a>
         )}
         {repo && (
@@ -40,9 +49,9 @@ const ProjectCard = ({ index, name, description, tags = [], link, repo }) => (
             href={repo}
             target='_blank'
             rel='noreferrer'
-            className='text-[14px] text-white underline underline-offset-4'
+            className='text-[15px] text-white underline underline-offset-4'
           >
-            Code
+            {repoLabel}
           </a>
         )}
       </div>
@@ -60,7 +69,7 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Work.</h2>
       </motion.div>
 
-      <div className='mt-16 flex flex-wrap gap-7'>
+      <div className='mt-[var(--stack-gap)] grid gap-[var(--stack-gap)] sm:grid-cols-2 lg:grid-cols-3'>
         {projects.map((project, index) => (
           <ProjectCard key={project.name} index={index} {...project} />
         ))}

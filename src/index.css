@@ -13,9 +13,33 @@
   color-scheme: dark;
 }
 
+/* Fluid type. Each size scales with BOTH viewport width and height, because the
+   binding constraint here is vertical: every section has to fit one screen. The
+   clamp bounds keep it readable on a phone and stop it ballooning on a 27" display. */
+:root {
+  --fs-lead: clamp(15px, 0.5vw + 1.05vh, 21px);
+  --fs-card-title: clamp(17px, 0.5vw + 1.15vh, 24px);
+  --fs-card-body: clamp(13.5px, 0.35vw + 0.8vh, 17px);
+  --fs-entry-title: clamp(18px, 0.5vw + 1.2vh, 25px);
+  --fs-entry-meta: clamp(14px, 0.35vw + 0.85vh, 18px);
+  --fs-entry-body: clamp(13.5px, 0.35vw + 0.85vh, 17px);
+  --section-pt: clamp(4.5rem, 9vh, 7rem);
+  --section-pb: clamp(1.5rem, 4vh, 3rem);
+  --stack-gap: clamp(1rem, 2.2vh, 1.75rem);
+}
+
+/* Full-page paging: any scroll gesture commits to the next section, and
+   `scroll-snap-stop: always` stops it from skipping past one on a fast flick. */
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
 .hash-span {
-  margin-top: -100px;
-  padding-bottom: 100px;
   display: block;
 }
 

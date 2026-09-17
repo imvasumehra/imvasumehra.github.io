@@ -10,7 +10,7 @@ const SectionWrapper = ({ id, children }) => (
     initial='hidden'
     whileInView='show'
     viewport={{ once: true, amount: 0.25 }}
-    className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+    className={`${styles.paddingX} pt-[var(--section-pt)] pb-[var(--section-pb)] min-h-[100svh] max-w-7xl mx-auto relative z-0 flex flex-col justify-center`}
   >
     <span className='hash-span' id={id}>
       &nbsp;

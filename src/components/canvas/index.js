@@ -1,4 +1,3 @@
-import ComputersCanvas from "./Computers";
-import StarsCanvas from "./Stars";
+import WaveformCanvas from "./Waveform";
 
-export { ComputersCanvas, StarsCanvas };
+export { WaveformCanvas };

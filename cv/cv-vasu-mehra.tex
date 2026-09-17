@@ -1,0 +1,86 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+
+\hypersetup{colorlinks=true, urlcolor=blue!60!black, linkcolor=black}
+\pagestyle{empty}
+
+\titleformat{\section}{\normalsize\bfseries\scshape}{}{0em}{}[\vspace{-0.6em}\rule{\textwidth}{0.5pt}]
+\titlespacing{\section}{0pt}{1.1em}{0.5em}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=0.15em, parsep=0em, topsep=0.25em}
+
+\newcommand{\role}[3]{\noindent\textbf{#1} \textbar{} #2 \hfill [#3]\par}
+
+\begin{document}
+
+%---------- HEADER ----------
+\begin{center}
+  {\LARGE \textbf{Vasu Mehra}}\\[0.35em]
+  Data Scientist II, Meesho \textbar{} Speech \& Language\\[0.25em]
+  \href{mailto:imvasumehra@gmail.com}{imvasumehra@gmail.com} \textbar{}
+  \href{https://imvasumehra.github.io}{imvasumehra.github.io} \textbar{}
+  \href{https://www.linkedin.com/in/vasumehra/}{linkedin.com/in/vasumehra} \textbar{}
+  \href{https://github.com/imvasumehra}{github.com/imvasumehra} \textbar{}
+  \href{https://scholar.google.com/citations?user=7qZykZsAAAAJ&hl=en}{Scholar}
+\end{center}
+
+%---------- WORK EXPERIENCE ----------
+\section{Work Experience}
+
+\role{Data Scientist II}{Meesho}{Jan '26 -- Present}
+\begin{itemize}
+  \item Fine-tuned IndicConformer for Hindi ASR on production call audio: v1 on Devanagari script, v2 extended to code-mixed Hindi--English speech.
+  \item Moved ASR inference to TensorRT (FP32), reducing serving latency and cost.
+\end{itemize}
+
+\role{Data Scientist I}{Meesho}{Jul '24 -- Dec '25}
+\begin{itemize}
+  \item Fine-tuned XTTS for Malayalam, Telugu, and Tamil text-to-speech, covering languages with substantially less available training audio than Hindi or English.
+  \item Built a fine-tuned Llama 3.2 3B Instruct model that simulates user behaviour on calls, letting the team evaluate prompts and conversation flows without waiting on live traffic.
+  \item Developed an XGBoost model ranking sellers by conversion affinity and scoring call slots hour by hour, with an explore--exploit policy for cold-start sellers; reduced outbound calling cost by 50\%.
+\end{itemize}
+
+\role{ML and Signal Processing Intern}{AI Health Highway Pvt. Ltd.}{May '23 -- Jul '23}
+\begin{itemize}
+  \item Surveyed and replicated state-of-the-art lung sound classification architectures (CNN, RNN) across mel-spectrogram and MFCC features; this work became the basis of the M.Tech thesis below.
+\end{itemize}
+
+\role{Software Developer}{GlobalLogic India Pvt. Ltd.}{Nov '20 -- Jul '22}
+\begin{itemize}
+  \item Migrated an insurance platform from VisualBasic to VB.Net across General Liability, Workers' Compensation, and Property lines of business.
+  \item Built an internal query tool over the central database that cut query resolution time by 70\%.
+\end{itemize}
+
+%---------- EDUCATION ----------
+\section{Education}
+
+\role{M.Tech, Computer Science and Automation}{IISc Bengaluru}{2022 -- 2024}
+\begin{itemize}
+  \item Thesis: \textit{Lung Sound Classification using Light-Weight Architectures}, advised by Prof. Siddharth Barman, co-advised by Prof. Prasanta Kumar Ghosh, in collaboration with AI Health Highway Pvt. Ltd.
+  \item Compared light-weight CNNs over mel-spectrogram and MFCC features against wav2vec 2.0 variants pre-trained on heart and lung sounds; compact CNNs reached 78.7\% on four-class adventitious sound detection, ahead of every wav2vec 2.0 configuration tested.
+\end{itemize}
+
+\role{B.Tech, Information Technology}{JSS Academy of Technical Education}{2016 -- 2020}
+
+%---------- PUBLICATIONS ----------
+\section{Publications}
+\begin{itemize}
+  \item Mehra, Vasu, and Dhiraj Pandey. ``Assistive Technology-Based Solution for Hearing Impairment Using Smartphones.'' \textit{International Journal of Software Innovation} 10(1), 2022, pp. 1--17.
+  \item Mehra, Vasu, et al. ``Technological Aids for Deaf and Mute in The Modern World.'' \textit{Recent Patents on Engineering} 15(6), 2021.
+\end{itemize}
+
+%---------- AWARDS ----------
+\section{Awards \& Honours}
+\begin{itemize}
+  \item \textbf{Graduate Aptitude Test in Engineering (GATE):} All India Rank 90, 99.98 percentile.
+  \item \textbf{Reliance Foundation Scholar:} among the top 100 candidates selected across India for postgraduate study.
+\end{itemize}
+
+\end{document}

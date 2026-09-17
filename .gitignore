@@ -27,3 +27,6 @@ dist-ssr
 cv/*.aux
 cv/*.log
 cv/*.out
+
+# Cloudflare Workers
+.wrangler

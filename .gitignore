@@ -30,3 +30,4 @@ cv/*.out
 
 # Cloudflare Workers
 .wrangler
+dist-ssr

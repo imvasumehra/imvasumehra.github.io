@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "./SectionWrapper";
+import RichText from "./RichText";
 
 const ProjectCard = ({
   index,
@@ -21,7 +22,7 @@ const ProjectCard = ({
   >
     <h3 className='text-white font-bold text-[length:var(--fs-card-title)] leading-[1.25]'>{name}</h3>
     <p className='mt-2 text-secondary text-[length:var(--fs-card-body)] leading-[1.55] flex-1'>
-      {description}
+      <RichText>{description}</RichText>
     </p>
 
     <div className='mt-3 flex flex-wrap gap-2'>

@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { textVariant } from "../utils/motion";
 import SectionWrapper from "./SectionWrapper";
+import RichText from "./RichText";
 
 const Experience = () => {
   // Nothing to show is better than placeholder history.
@@ -29,7 +30,7 @@ const Experience = () => {
             <ul className='mt-2 list-disc ml-5 space-y-1'>
               {exp.points?.map((point, i) => (
                 <li key={i} className='text-white-100 text-[length:var(--fs-entry-body)] leading-[1.6]'>
-                  {point}
+                  <RichText>{point}</RichText>
                 </li>
               ))}
             </ul>

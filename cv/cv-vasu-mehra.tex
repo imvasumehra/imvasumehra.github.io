@@ -37,14 +37,14 @@
 \role{Data Scientist II}{Meesho}{Jan '26 -- Present}
 \begin{itemize}
   \item Fine-tuned IndicConformer for Hindi ASR on production call audio: v1 on Devanagari script, v2 extended to code-mixed Hindi--English speech.
-  \item Moved ASR inference to TensorRT (FP32), reducing serving latency and cost.
+  \item Moved ASR inference to TensorRT (FP32), serving 30 RPS at p90 100\,ms / p99 200\,ms latency and cutting serving cost by 60\%.
+  \item Developed an XGBoost model ranking sellers by conversion affinity and scoring call slots hour by hour, with an explore--exploit policy for cold-start sellers; reduced outbound calling cost by 50\%.
 \end{itemize}
 
 \role{Data Scientist I}{Meesho}{Jul '24 -- Dec '25}
 \begin{itemize}
-  \item Fine-tuned XTTS for Malayalam, Telugu, and Tamil text-to-speech, covering languages with substantially less available training audio than Hindi or English.
+  \item Fine-tuned XTTS for Malayalam, Telugu, and Tamil text-to-speech, covering languages with substantially less available training audio than Hindi or English; output quality assessed by human auditors.
   \item Built a fine-tuned Llama 3.2 3B Instruct model that simulates user behaviour on calls, letting the team evaluate prompts and conversation flows without waiting on live traffic.
-  \item Developed an XGBoost model ranking sellers by conversion affinity and scoring call slots hour by hour, with an explore--exploit policy for cold-start sellers; reduced outbound calling cost by 50\%.
 \end{itemize}
 
 \role{ML and Signal Processing Intern}{AI Health Highway Pvt. Ltd.}{May '23 -- Jul '23}

@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { education } from "../constants";
 import { textVariant } from "../utils/motion";
 import SectionWrapper from "./SectionWrapper";
+import RichText from "./RichText";
 
 const Education = () => {
   if (!education.length) return null;
@@ -29,7 +30,7 @@ const Education = () => {
               <ul className='mt-2 list-disc ml-5 space-y-1'>
                 {item.points.map((point, i) => (
                   <li key={i} className='text-white-100 text-[length:var(--fs-entry-body)] leading-[1.6]'>
-                    {point}
+                    <RichText>{point}</RichText>
                   </li>
                 ))}
               </ul>

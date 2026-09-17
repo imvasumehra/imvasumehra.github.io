@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
 
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a future data scientist <br className='sm:block hidden' /> working in the field of Signal Processing and <br className='sm:block hidden' />Natural Language Processing.
+            Data scientist working in signal processing <br className='sm:block hidden' />and natural language processing.
           </p>
         </div>
       </div>
